@@ -34,6 +34,13 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+         $.ajax({
+            url: 'http://jsonplaceholder.typicode.com/posts/1',
+            method: 'GET'
+        }).then(function(data) {
+            $(".classroom-list").append(data.title);
+        });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
