@@ -1,0 +1,1 @@
+A fundamental misconception that I addressed was the difference between client-side(Backbone.js) javascript and server-side javascript(Node/Express). Since I'm serving JSON from a [Rails API](https://boxtops.herokuapp.com/), I should only be writing client-side JS in this repo. Today, I'm removing Node and stripping away everything that isn't necessary.
