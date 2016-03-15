@@ -21,14 +21,14 @@
 define([
   'underscore',
   'backbone'
-], var Classroom = Backbone.Model.extend({
+], function(_,Backbone){
+  var Classroom = Backbone.Model.extend({
   validate: function(attributes){
     if (attributes.teacherName === ""){
       return "You must set a teacher name for a new classroom. Every classroom needs a great teacher!"
     }
   },
   initialize: function(){
-    alert('initilize classroom');
     this.bind("error", function(model, error){
       alert(error);
     });
